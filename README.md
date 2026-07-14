@@ -19,10 +19,23 @@ Tailwind CSS, with motion by Framer Motion.
 
 ```bash
 npm install
-npm run dev      # start the dev server (http://localhost:5173)
+npm run dev      # start the dev server (http://localhost:5173/roadside-eatery/)
 npm run build    # production build to /dist
 npm run preview  # preview the production build
 ```
+
+## Deploying to GitHub Pages
+
+This repo serves Pages from the **`gh-pages` branch** (no Actions minutes needed).
+Build locally and publish the `dist` output to that branch:
+
+```bash
+npm run deploy   # builds, then pushes /dist to the gh-pages branch
+```
+
+Then in the repo: **Settings → Pages → Source = "Deploy from a branch" → `gh-pages` / root**.
+The site publishes at `https://<user>.github.io/roadside-eatery/`.
+(The Vite `base` in `vite.config.js` must match the repo name.)
 
 ## Sections
 

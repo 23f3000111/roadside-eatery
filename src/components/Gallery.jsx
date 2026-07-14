@@ -18,7 +18,7 @@ const galleryItems = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="section-pad bg-[#FBF6EF] overflow-hidden">
+    <section id="gallery" className="section-pad bg-surface overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         {/* Header */}
         <motion.div
@@ -29,16 +29,16 @@ export default function Gallery() {
           className="text-center mb-12"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-0.5 bg-[#E8622A]" />
-            <span className="font-manrope text-xs text-[#E8622A] tracking-[0.25em] uppercase font-semibold">
+            <div className="w-8 h-0.5 bg-accent" />
+            <span className="font-manrope text-xs text-accent tracking-[0.25em] uppercase font-semibold">
               Instagram
             </span>
-            <div className="w-8 h-0.5 bg-[#E8622A]" />
+            <div className="w-8 h-0.5 bg-accent" />
           </div>
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#1F1B18] mb-2">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-ink mb-2">
             From Our Grill, to Your Feed.
           </h2>
-          <p className="font-manrope text-base text-[#6B5F55]">
+          <p className="font-manrope text-base text-muted">
             Follow us {IG_HANDLE}
           </p>
         </motion.div>
@@ -65,7 +65,7 @@ export default function Gallery() {
                 }`}
               />
               {/* Hover overlay */}
-              <div className="absolute inset-0 bg-[#E8622A]/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-accent/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                 <div className="text-center text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <Instagram size={28} className="mx-auto mb-2" />
                   <span className="font-manrope text-sm font-semibold">Setia Alam</span>

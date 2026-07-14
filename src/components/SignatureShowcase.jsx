@@ -11,7 +11,7 @@ const dishes = [
     id: 1,
     name: 'Char-Grilled Chicken Chop',
     tag: 'House Favourite',
-    desc: 'Our signature plate — flame-grilled quarter chicken glazed in smoky black-pepper sauce, with golden fries and creamy coleslaw. The one everybody orders.',
+    desc: 'Our signature plate, flame-grilled quarter chicken glazed in smoky black-pepper sauce, with golden fries and creamy coleslaw. The one everybody orders.',
     price: 'RM 18.90',
     img: asset('images/chicken-chop.jpg'),
     color: '#C99A5B',
@@ -65,10 +65,10 @@ export default function SignatureShowcase() {
   const accent = dishes[activeIndex].color;
 
   return (
-    <section id="signatures" className="bg-[#1F1B18]">
+    <section id="signatures" className="bg-ink">
       <div className="lg:flex">
 
-        {/* ══ LEFT — sticky image panel (desktop only) ══ */}
+        {/* ══ LEFT, sticky image panel (desktop only) ══ */}
         <div className="hidden lg:block lg:w-1/2">
           <div
             style={{ position: 'sticky', top: '90px', height: 'calc(100vh - 90px)' }}
@@ -105,7 +105,7 @@ export default function SignatureShowcase() {
                 style={{ zIndex: 3 }}
               />
 
-              {/* Price — crossfade per dish */}
+              {/* Price, crossfade per dish */}
               <div className="absolute bottom-7 left-7" style={{ zIndex: 4 }}>
                 {dishes.map((item, i) => (
                   <motion.span
@@ -144,18 +144,18 @@ export default function SignatureShowcase() {
           </div>
         </div>
 
-        {/* ══ RIGHT — scrolling steps ══ */}
+        {/* ══ RIGHT, scrolling steps ══ */}
         <div className="lg:w-1/2">
           {/* Mobile-only section header */}
           <div className="lg:hidden px-6 pt-20 pb-4">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-8 h-0.5 bg-[#E8622A]" />
-              <span className="font-manrope text-xs text-[#E8622A] tracking-[0.25em] uppercase font-semibold">
+              <div className="w-8 h-0.5 bg-accent" />
+              <span className="font-manrope text-xs text-accent tracking-[0.25em] uppercase font-semibold">
                 Signature Plates
               </span>
             </div>
             <h2 className="font-playfair text-4xl font-bold text-white">
-              Grilled to <span className="italic text-[#E8622A]">Order.</span>
+              Grilled to <span className="italic text-accent">Order.</span>
             </h2>
           </div>
 

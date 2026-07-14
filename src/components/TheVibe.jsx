@@ -9,9 +9,9 @@ export default function TheVibe() {
   const rightY = useTransform(scrollYProgress, [0, 1], ['6%', '-6%']);
 
   return (
-    <section id="vibe" ref={ref} className="section-pad bg-[#1F1B18] overflow-hidden relative">
+    <section id="vibe" ref={ref} className="section-pad bg-ink overflow-hidden relative">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#E8622A]/6 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent/6 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         {/* Header */}
@@ -23,18 +23,18 @@ export default function TheVibe() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-0.5 bg-[#E8622A]" />
-            <span className="font-manrope text-xs text-[#E8622A] tracking-[0.25em] uppercase font-semibold">
+            <div className="w-8 h-0.5 bg-accent" />
+            <span className="font-manrope text-xs text-accent tracking-[0.25em] uppercase font-semibold">
               The Vibe
             </span>
-            <div className="w-8 h-0.5 bg-[#E8622A]" />
+            <div className="w-8 h-0.5 bg-accent" />
           </div>
           <h2 className="font-playfair text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4">
             Come As You Are.
-            <span className="block italic text-[#E8622A]">Stay a While.</span>
+            <span className="block italic text-accent">Stay a While.</span>
           </h2>
           <p className="font-manrope text-lg text-white/50 max-w-xl mx-auto">
-            Raw concrete, warm timber and a wash of neon — big tables made for
+            Raw concrete, warm timber and a wash of neon, big tables made for
             families, catch-ups and long, unhurried meals.
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ export default function TheVibe() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             <div className="absolute bottom-5 left-5">
-              <span className="font-manrope text-[10px] text-[#E8622A] tracking-widest uppercase font-semibold">Good Company</span>
+              <span className="font-manrope text-[10px] text-accent tracking-widest uppercase font-semibold">Good Company</span>
               <h3 className="font-playfair text-xl font-bold text-white">Made for Gatherings</h3>
             </div>
           </motion.div>
@@ -77,7 +77,7 @@ export default function TheVibe() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             <div className="absolute bottom-5 left-5">
-              <span className="font-manrope text-[10px] text-[#E8622A] tracking-widest uppercase font-semibold">The Space</span>
+              <span className="font-manrope text-[10px] text-accent tracking-widest uppercase font-semibold">The Space</span>
               <h3 className="font-playfair text-xl font-bold text-white">Concrete &amp; Timber</h3>
             </div>
           </motion.div>
@@ -98,7 +98,7 @@ export default function TheVibe() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             <div className="absolute bottom-5 left-5">
-              <span className="font-manrope text-[10px] text-[#E8622A] tracking-widest uppercase font-semibold">Catch-Ups</span>
+              <span className="font-manrope text-[10px] text-accent tracking-widest uppercase font-semibold">Catch-Ups</span>
               <h3 className="font-playfair text-xl font-bold text-white">Where Friends Meet</h3>
             </div>
           </motion.div>
@@ -124,7 +124,7 @@ export default function TheVibe() {
             >
               <div className="text-2xl mb-2">{item.icon}</div>
               <div className="font-manrope font-semibold text-white text-sm">{item.label}</div>
-              <div className="font-manrope text-xs text-[#E8A33D] mt-1">{item.sub}</div>
+              <div className="font-manrope text-xs text-gold mt-1">{item.sub}</div>
             </div>
           ))}
         </motion.div>

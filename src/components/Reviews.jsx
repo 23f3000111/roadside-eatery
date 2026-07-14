@@ -16,7 +16,7 @@ const reviews = [
     avatar: 'F',
     color: '#E8A33D',
     rating: 5,
-    text: 'The salted egg pasta is dangerously good. Cosy spot with a nice concrete-industrial look — great for a chill dinner with friends.',
+    text: 'The salted egg pasta is dangerously good. Cosy spot with a nice concrete-industrial look, great for a chill dinner with friends.',
     date: 'Google Review',
   },
   {
@@ -32,7 +32,7 @@ const reviews = [
     avatar: 'A',
     color: '#8A5A3B',
     rating: 5,
-    text: 'Solid ribeye steak for the price and the loaded fries are a must. Good place to hang out late — open till midnight which is a big plus.',
+    text: 'Solid ribeye steak for the price and the loaded fries are a must. Good place to hang out late, open till midnight which is a big plus.',
     date: 'Google Review',
   },
   {
@@ -66,7 +66,7 @@ export default function Reviews() {
   };
 
   return (
-    <section id="reviews" className="section-pad bg-[#FBF6EF] overflow-hidden">
+    <section id="reviews" className="section-pad bg-surface overflow-hidden">
       <div className="max-w-5xl mx-auto px-5 md:px-8">
         {/* Header */}
         <motion.div
@@ -77,13 +77,13 @@ export default function Reviews() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-0.5 bg-[#E8622A]" />
-            <span className="font-manrope text-xs text-[#E8622A] tracking-[0.25em] uppercase font-semibold">
+            <div className="w-8 h-0.5 bg-accent" />
+            <span className="font-manrope text-xs text-accent tracking-[0.25em] uppercase font-semibold">
               Reviews
             </span>
-            <div className="w-8 h-0.5 bg-[#E8622A]" />
+            <div className="w-8 h-0.5 bg-accent" />
           </div>
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#1F1B18] mb-4">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-ink mb-4">
             Loved by Setia Alam.
           </h2>
 
@@ -91,11 +91,11 @@ export default function Reviews() {
           <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-6 py-3 shadow-md mt-2">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} fill="#E8A33D" className="text-[#E8A33D]" />
+                <Star key={i} size={16} fill="currentColor" className="text-gold" />
               ))}
             </div>
-            <span className="font-playfair font-bold text-2xl text-[#1F1B18]">4.8</span>
-            <span className="font-manrope text-sm text-[#6B5F55]">300+ Google Reviews</span>
+            <span className="font-playfair font-bold text-2xl text-ink">4.8</span>
+            <span className="font-manrope text-sm text-muted">300+ Google Reviews</span>
           </div>
         </motion.div>
 
@@ -116,12 +116,12 @@ export default function Reviews() {
                 {/* Stars */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(reviews[current].rating)].map((_, i) => (
-                    <Star key={i} size={18} fill="#E8A33D" className="text-[#E8A33D]" />
+                    <Star key={i} size={18} fill="currentColor" className="text-gold" />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <blockquote className="font-playfair text-xl md:text-2xl xl:text-3xl font-medium text-[#1F1B18] leading-relaxed mb-8 italic">
+                <blockquote className="font-playfair text-xl md:text-2xl xl:text-3xl font-medium text-ink leading-relaxed mb-8 italic">
                   "{reviews[current].text}"
                 </blockquote>
 
@@ -134,10 +134,10 @@ export default function Reviews() {
                     {reviews[current].avatar}
                   </div>
                   <div>
-                    <div className="font-manrope font-semibold text-[#1F1B18]">
+                    <div className="font-manrope font-semibold text-ink">
                       {reviews[current].name}
                     </div>
-                    <div className="font-manrope text-xs text-[#6B5F55]">
+                    <div className="font-manrope text-xs text-muted">
                       {reviews[current].date}
                     </div>
                   </div>
@@ -156,8 +156,8 @@ export default function Reviews() {
                   onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
                   className={`rounded-full transition-all duration-300 ${
                     i === current
-                      ? 'w-7 h-2.5 bg-[#E8622A]'
-                      : 'w-2.5 h-2.5 bg-[#F3D9CC] hover:bg-[#E8622A]'
+                      ? 'w-7 h-2.5 bg-accent'
+                      : 'w-2.5 h-2.5 bg-accent/20 hover:bg-accent'
                   }`}
                   aria-label={`Go to review ${i + 1}`}
                 />
@@ -168,14 +168,14 @@ export default function Reviews() {
             <div className="flex gap-3">
               <button
                 onClick={() => navigate(-1)}
-                className="w-11 h-11 rounded-full border-2 border-[#E8622A] text-[#E8622A] flex items-center justify-center hover:bg-[#E8622A] hover:text-white transition-all duration-300"
+                className="w-11 h-11 rounded-full border-2 border-accent text-accent flex items-center justify-center hover:bg-accent hover:text-white transition-all duration-300"
                 aria-label="Previous review"
               >
                 <ChevronLeft size={18} />
               </button>
               <button
                 onClick={() => navigate(1)}
-                className="w-11 h-11 rounded-full bg-[#E8622A] text-white flex items-center justify-center hover:bg-[#C24A18] transition-colors duration-300"
+                className="w-11 h-11 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent-deep transition-colors duration-300"
                 aria-label="Next review"
               >
                 <ChevronRight size={18} />

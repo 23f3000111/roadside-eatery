@@ -7,21 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        ember: {
-          DEFAULT: '#E8622A',
-          deep:    '#C24A18',
-        },
-        amber:    '#E8A33D',
-        charcoal: '#1F1B18',
-        cream:    '#FBF6EF',
-        wood:     '#8A5A3B',
+        accent:        'rgb(var(--accent) / <alpha-value>)',
+        'accent-deep': 'rgb(var(--accent-deep) / <alpha-value>)',
+        gold:          'rgb(var(--gold) / <alpha-value>)',
+        ink:           'rgb(var(--ink) / <alpha-value>)',
+        'ink-deep':    'rgb(var(--ink-deep) / <alpha-value>)',
+        surface:       'rgb(var(--surface) / <alpha-value>)',
+        muted:         'rgb(var(--muted) / <alpha-value>)',
+        tint:          'rgb(var(--tint) / <alpha-value>)',
+        line:          'rgb(var(--line) / <alpha-value>)',
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'Georgia', 'serif'],
         manrope:  ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
-      },
-      backgroundImage: {
-        'warm-gradient': 'linear-gradient(135deg, #FBF6EF 0%, #fff 55%, #fdf0e8 100%)',
       },
     },
   },

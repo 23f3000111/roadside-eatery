@@ -23,25 +23,25 @@ export default function Location() {
             transition={{ duration: 0.9 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-0.5 bg-[#E8622A]" />
-              <span className="font-manrope text-xs text-[#E8622A] tracking-[0.25em] uppercase font-semibold">
+              <div className="w-8 h-0.5 bg-accent" />
+              <span className="font-manrope text-xs text-accent tracking-[0.25em] uppercase font-semibold">
                 Find Us
               </span>
             </div>
 
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#1F1B18] leading-tight mb-8">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-ink leading-tight mb-8">
               Pull Over for
-              <span className="block italic text-[#E8622A]">Something Good.</span>
+              <span className="block italic text-accent">Something Good.</span>
             </h2>
 
             {/* Address */}
             <div className="flex items-start gap-4 mb-6 group">
-              <div className="w-10 h-10 rounded-xl bg-[#E8622A]/12 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#E8622A] transition-colors duration-300">
-                <MapPin size={18} className="text-[#E8622A] group-hover:text-white transition-colors" />
+              <div className="w-10 h-10 rounded-xl bg-accent/12 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-accent transition-colors duration-300">
+                <MapPin size={18} className="text-accent group-hover:text-white transition-colors" />
               </div>
               <div>
-                <div className="font-manrope font-semibold text-[#1F1B18] mb-1">Address</div>
-                <div className="font-manrope text-[#6B5F55] leading-relaxed">
+                <div className="font-manrope font-semibold text-ink mb-1">Address</div>
+                <div className="font-manrope text-muted leading-relaxed">
                   Jalan Setia Prima,<br />
                   Setia Alam, 40170 Shah Alam,<br />
                   Selangor, Malaysia
@@ -51,16 +51,16 @@ export default function Location() {
 
             {/* Hours */}
             <div className="flex items-start gap-4 mb-8">
-              <div className="w-10 h-10 rounded-xl bg-[#E8622A]/12 flex items-center justify-center shrink-0">
-                <Clock size={18} className="text-[#E8622A]" />
+              <div className="w-10 h-10 rounded-xl bg-accent/12 flex items-center justify-center shrink-0">
+                <Clock size={18} className="text-accent" />
               </div>
               <div className="flex-1">
-                <div className="font-manrope font-semibold text-[#1F1B18] mb-3">Opening Hours</div>
+                <div className="font-manrope font-semibold text-ink mb-3">Opening Hours</div>
                 <div className="space-y-2">
                   {hours.map((h) => (
-                    <div key={h.day} className="flex items-center justify-between py-2 border-b border-[#F3ECE2] last:border-0">
-                      <span className="font-manrope text-sm text-[#6B5F55]">{h.day}</span>
-                      <span className="font-manrope text-sm font-semibold text-[#E8622A]">
+                    <div key={h.day} className="flex items-center justify-between py-2 border-b border-line last:border-0">
+                      <span className="font-manrope text-sm text-muted">{h.day}</span>
+                      <span className="font-manrope text-sm font-semibold text-accent">
                         {h.time}
                       </span>
                     </div>
@@ -101,7 +101,7 @@ export default function Location() {
             {/* Map */}
             <div className="rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(31,27,24,0.12)] h-[400px] md:h-[500px] border-4 border-white">
               <iframe
-                title="The Roadside Eatery, Setia Alam — location map"
+                title="The Roadside Eatery, Setia Alam, location map"
                 src={MAP_SRC}
                 width="100%"
                 height="100%"
@@ -120,12 +120,12 @@ export default function Location() {
               transition={{ delay: 0.5 }}
               className="absolute -bottom-5 left-6 right-6 bg-white rounded-2xl p-5 shadow-2xl flex items-center gap-4"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#E8622A] flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center shrink-0">
                 <MapPin size={20} className="text-white" />
               </div>
               <div>
-                <div className="font-playfair font-semibold text-[#1F1B18]">The Roadside Eatery</div>
-                <div className="font-manrope text-xs text-[#6B5F55]">
+                <div className="font-playfair font-semibold text-ink">The Roadside Eatery</div>
+                <div className="font-manrope text-xs text-muted">
                   Setia Alam, Shah Alam, Selangor
                 </div>
               </div>

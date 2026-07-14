@@ -10,6 +10,7 @@ import Location from './components/Location';
 import Gallery from './components/Gallery';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import WhatsAppBot from './components/WhatsAppBot';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
       <Gallery />
       <CTA />
       <Footer />
+      <WhatsAppBot />
     </div>
   );
 }
